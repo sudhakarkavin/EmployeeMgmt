@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sudhakar-EmployeeMgmt",
+		"_postman_id": "0b7fbdf6-2cab-73d5-711f-b4b64d7e85d9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddDepartment",
+			"request": {
+				"url": "http://localhost:8888/departments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shortName\":\"R&D\",\n\t\"departmentName\":\"Research & Development\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee",
+			"request": {
+				"url": "http://localhost:8888/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"Rajan\",\n\t\"lastName\":\"S\",\n\t\"department\":{\n\t\t\"departmentId\":1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee-Validation",
+			"request": {
+				"url": "http://localhost:8888/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"Rajan\",\n\t\"lastName\":\"S\",\n\t\"department\":{\n\t\t\"departmentId\":1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"url": "http://localhost:8888/employees",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"Rajan\",\n\t\"lastName\":\"S\",\n\t\"department\":{\n\t\t\"departmentId\":1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"url": "http://localhost:8888/employees/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"employeeID\": 1,\n        \"firstName\": \"Sham\",\n        \"lastName\": \"K\",\n        \"department\": {\n            \"departmentId\": 1,\n            \"shortName\": \"R&D\",\n            \"departmentName\": \"Research & Development\"\n        }\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployee",
+			"request": {
+				"url": "http://localhost:8888/employees",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"Sudhakar\",\n\t\"lastName\":\"K\",\n\t\"department\":{\n\t\t\"departmentId\":1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetDepartment",
+			"request": {
+				"url": "http://localhost:8888/departments",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shortName\":\"R&D\",\n\t\"departmentName\":\"Research & Development\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
